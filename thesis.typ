@@ -1,7 +1,9 @@
-#import "modern-nju-thesis-0.3.4\lib.typ": documentclass, indent
+#import "resources\lib.typ": documentclass, indent
 
-// 你首先应该安装 https://github.com/nju-lug/modern-nju-thesis/tree/main/fonts/FangZheng 里的所有字体，
-//以及思源宋体和思源黑体的所有字重
+// 你首先应该安装 /fonts/FangZheng 里的所有字体，
+// 强烈推荐安装思源宋体和思源黑体的所有字重
+// https://github.com/adobe-fonts/source-han-serif/releases/download/2.002R/09_SourceHanSerifSC.zip
+// https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSansSC.zip
 
 #let (
   // 布局函数
@@ -9,7 +11,7 @@
   // 页面函数
   fonts-display-page, cover, title, decl-page, abstract, abstract-en, bilingual-bibliography,
   outline-page, list-of-figures, list-of-tables, notation, acknowledgement,conclusion,
-  onum: o,
+  onum: o, 
 ) = documentclass(
   // anonymous: true,  // 盲审模式
   twoside: false ,  // 双面模式，会加入空白页，便于打印
@@ -30,6 +32,7 @@
     supervisor: ("某某", "教授"),
     supervisor-en: "Professor My Supervisor",
     submit-date: datetime.today(),
+    sign-date:datetime(day: 17, month: 7, year: 2024),
   ),
   // 参考文献源
   bibliography: bibliography.with("ref.bib"),

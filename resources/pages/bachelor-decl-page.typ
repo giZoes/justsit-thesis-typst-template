@@ -1,9 +1,10 @@
 #import "../utils/indent.typ": indent
 #import "../utils/style.typ": 字号, 字体
+#import "../../others/bachelor-assignment.typ":bachelor-assignment
 
 // 本科生声明页
 #let bachelor-decl-page(
-  need-proposal: false,
+  // need-assignment: false,
   anonymous: false,
   twoside: false,
   fonts: (:),
@@ -17,7 +18,7 @@
   // 1.  默认参数
   fonts = 字体 + fonts
   info = (
-    title: ("基于 Typst 的", "南京大学学位论文"),
+    title: ("基于 Typst 的", "苏理工学位论文"),
   ) + info
 
   // 2.  对参数进行处理
@@ -137,8 +138,12 @@
 
 //任务书
 pagebreak(weak: true, to: if twoside { "odd" })
+// if need-assignment {
+//   bachelor-assignment()
+// }else{
+  text(font: fonts.宋体, size: 字号.四号, fill: red,)[#align(center)[任务书添加至此处]]
+// }
 
-text(font: fonts.宋体, size: 字号.四号, fill: red,)[#align(center)[任务书添加至此处]]
 
 
 }

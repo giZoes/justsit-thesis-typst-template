@@ -18,7 +18,7 @@
 
 **你只需要修改 `thesis.typ` 文件即可，基本可以满足你的所有需求。**
 
-如果你认为不能满足你的需求，可以先查阅后面的 [Q&A](#Q&A) 部分。
+如果你认为不能满足你的需求，可以先查阅后面的 [Q&A](#qa) 部分。
 
 
 ### VS Code 本地编辑（推荐）
@@ -28,7 +28,7 @@
     - 你还可以下载[南京大学学位论文](https://github.com/nju-lug/modern-nju-thesis?tab=readme-ov-file)作者开发的 [Typst Sync](https://marketplace.visualstudio.com/items?itemName=OrangeX4.vscode-typst-sync) 和 [Typst Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.vscode-typst-sympy-calculator) 插件，前者提供了本地包的云同步功能，后者提供了基于 Typst 语法的科学计算器功能。
 2. 用 VS Code 打开下载好的目录，打开 `thesis.typ` 文件，并按下 `Ctrl + K V` 进行实时编辑和预览。
 
-![](imgs/gallery.png)
+![](resources/imgs/gallery.png)
 
 ### 特性 / 路线图
 
@@ -43,7 +43,6 @@
     - [x] **自定义字体配置**，可以配置「宋体」、「黑体」与「楷体」等字体对应的具体字体
     - [x] **数学字体配置**：模板不提供配置，用户可以自己使用 `#show math.equation: set text(font: "Fira Math")` 更改
 - **模板**
-  - [x] 本科生模板
     - [x] 字体测试页
     - [x] 封面
     - [x] 论文标题页
@@ -66,13 +65,15 @@
     - [ ] 定理环境（这个也可以自己使用第三方包配置）
 - **其他文件**
     - [x] 本科生开题报告
+    - [ ] 本科生任务书
+    - [ ] 中期检查报告
 
 
 ## 其他文件
 
-还实现了本科生的开题报告，只需要预览和编辑 `proposal` 目录下的文件即可。（一般般完善）
+还实现了本科生的开题报告，只需要预览和编辑 `others` 目录下的文件即可。（一般般完善）
 
-![开题报告](./imgs/proposal.png)
+![开题报告](resources/imgs/proposal.png)
 
 
 ## Q&A
@@ -142,7 +143,7 @@
 
 ### 我如何更改页面上的样式？具体的语法是怎么样的？
 
-理论上你并不需要更改 `nju-thesis` 目录下的任何文件，无论是样式还是其他的配置，你都可以在 `thesis.typ` 文件内修改函数参数实现更改。具体的更改方式可以阅读 `nju-thesis` 目录下的文件的函数参数。
+理论上你并不需要更改 `resources` 目录下的任何文件，无论是样式还是其他的配置，你都可以在 `thesis.typ` 文件内修改函数参数实现更改。具体的更改方式可以阅读 `resources` 目录下的文件的函数参数。
 
 例如，想要更改页面边距为 `50pt`，只需要将
 
@@ -169,7 +170,7 @@
 - `images` 目录: 用于放置图片。
 
 
-### 内部目录（.\modern-nju-thesis-0.3.4下）
+### 内部目录（.\resources下）
 
 - `utils` 目录: 包含了模板使用到的各种自定义辅助函数，存放没有外部依赖，且 **不会渲染出页面的函数**。
 - `pages` 目录: 包含了模板用到的各个 **独立页面**，例如封面页、声明页、摘要等，即 **会渲染出不影响其他页面的独立页面的函数**。

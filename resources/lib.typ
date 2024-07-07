@@ -18,7 +18,7 @@
 #import "pages/list-of-figures.typ": list-of-figures
 #import "pages/list-of-tables.typ": list-of-tables
 #import "pages/notation.typ": notation
-#import "pages/conclusion.typ": conclusion
+#import "layouts/conclusion.typ": conclusion
 #import "pages/acknowledgement.typ": acknowledgement
 #import "utils/custom-cuti.typ": *
 #import "utils/textcricled.typ": onum
@@ -35,7 +35,7 @@
   degree: "academic",  // "academic" | "professional"，学位类型，默认为学术型 academic
   nl-cover: false,  // TODO: 是否使用国家图书馆封面，默认关闭
   twoside: false,  // 双面模式，会加入空白页，便于打印
-  // need-proposal: false,
+  // need-assignment: false,
   anonymous: false,  // 盲审模式
   bibliography: none,  // 原来的参考文献函数
   fonts: (:),  // 字体，应传入「宋体」、「黑体」、「楷体」、「仿宋」、「等宽」
@@ -61,20 +61,6 @@
     supervisor-ii: (),
     supervisor-ii-en: "",
     submit-date: datetime.today(),
-    // 以下为研究生项
-    defend-date: datetime.today(),
-    confer-date: datetime.today(),
-    bottom-date: datetime.today(),
-    chairman: "某某某 教授",
-    reviewer: ("某某某 教授", "某某某 教授"),
-    clc: "O643.12",
-    udc: "544.4",
-    secret-level: "公开",
-    supervisor-contact: "南京大学 江苏省南京市栖霞区仙林大道163号",
-    email: "xyz@smail.nju.edu.cn",
-    school-code: "10284",
-    degree: auto,
-    degree-en: auto,
   ) + info
 
   (
@@ -87,7 +73,7 @@
     fonts: fonts,
     info: info,
     onum: onum,
-    // need-proposal: need-proposal,
+    // need-assignment: need-assignment,
     // 页面布局
     doc: (..args) => {
       doc(
@@ -156,7 +142,7 @@
         bachelor-decl-page(
           anonymous: anonymous,
           twoside: twoside,
-          // need-proposal: need-proposal,
+          // need-assignment: need-assignment,
           ..args,
           fonts: fonts + args.named().at("fonts", default: (:)),
           info: info + args.named().at("info", default: (:)),
