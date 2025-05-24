@@ -1,8 +1,6 @@
-#import "indent.typ":fake-par
-
 #let onum(num) = {
   set text(size: 0.625em)
-  fake-par
+  h(-4em)
   num = str(num)
   box(
     circle(

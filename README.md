@@ -1,8 +1,6 @@
 # 苏理工学位论文typst模板 justsit-thesis-typst-template
 
-基于苏理工论文参考格式修改完善的 Typst 模板，能够简洁、快速、持续生成 PDF 格式的毕业论文。
-
-
+截至2025年5月，基于苏理工论文参考格式修改完善的 Typst 模板，能够简洁、快速、持续生成 PDF 格式的毕业论文。
 
 [Typst中文教程](https://typst-doc-cn.github.io/tutorial/introduction.html)
 
@@ -23,7 +21,7 @@
 
 ### VS Code 本地编辑（推荐）
 
-1. 在 VS Code 中安装 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 和 [Typst Preview](https://marketplace.visualstudio.com/items?itemName=mgt19937.typst-preview) 插件。前者负责语法高亮和错误检查等功能，后者负责预览。
+1. 在 VS Code 中安装 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 插件。负责语法高亮、错误检查和预览。
     - 也推荐下载 [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion) 插件，其提供了例如 `Ctrl + B` 进行加粗等便捷的快捷键。
     - 你还可以下载[南京大学学位论文](https://github.com/nju-lug/modern-nju-thesis?tab=readme-ov-file)作者开发的 [Typst Sync](https://marketplace.visualstudio.com/items?itemName=OrangeX4.vscode-typst-sync) 和 [Typst Sympy Calculator](https://marketplace.visualstudio.com/items?itemName=OrangeX4.vscode-typst-sympy-calculator) 插件，前者提供了本地包的云同步功能，后者提供了基于 Typst 语法的科学计算器功能。
 2. 用 VS Code 打开下载好的目录，打开 `thesis.typ` 文件，并按下 `Ctrl + K V` 进行实时编辑和预览。
@@ -61,12 +59,10 @@
     - [x] 数学公式使用 `(1-1)` 格式进行编号
     - [x] 三级标题下的编号按如此顺序：1）；（1）；①
 
-- **环境**
-    - [ ] 定理环境（这个也可以自己使用第三方包配置）
 - **其他文件**
     - [x] 本科生开题报告
-    - [ ] 本科生任务书
-    - [ ] 中期检查报告
+    - [x] 本科生任务书
+    - [x] 中期检查报告
 
 
 ## 其他文件

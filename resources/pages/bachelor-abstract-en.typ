@@ -1,6 +1,5 @@
 #import "../utils/custom-cuti.typ": fakebold
 #import "../utils/style.typ": 字号, 字体
-#import "../utils/indent.typ": fake-par
 #import "../utils/invisible-heading.typ": invisible-heading
 
 // 本科生英文摘要页
@@ -58,8 +57,8 @@
 
 
     #set text(font: fonts.宋体, size: 字号.小四)
-    #set par(leading: leading, justify: true)
-    #show par: set block(spacing: spacing)
+    #set par(leading: leading, justify: true, spacing: spacing)
+    // #show par: set block(spacing: spacing)
 
     // // 标记一个不可见的标题用于目录生成
     // #invisible-heading(level: 1, outlined: outlined, outline-title)
@@ -72,9 +71,7 @@
 
     #[
       
-      #set par(first-line-indent: 2em)
-
-      #fake-par
+      #set par(first-line-indent: (amount: 2em, all: true))
 
       #body
 

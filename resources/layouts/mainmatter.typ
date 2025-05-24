@@ -1,9 +1,7 @@
-#import "@preview/anti-matter:0.0.2": anti-front-end
 #import "@preview/i-figured:0.2.4"
 #import "../utils/style.typ": 字号, 字体
 #import "../utils/custom-numbering.typ": custom-numbering
 #import "../utils/custom-heading.typ": heading-display, active-heading, current-heading
-#import "../utils/indent.typ": fake-par
 #import "../utils/unpairs.typ": unpairs
 #import "@preview/numbly:0.1.0": numbly
 
@@ -15,7 +13,7 @@
   leading: 1.5 * 15.6pt - 0.7em,
   spacing: 1.5 * 15.6pt - 0.7em,
   justify: true,
-  first-line-indent: 2em,
+  first-line-indent: (amount: 2em, all: true),
   numbering: custom-numbering.with(first-level: "第一章 ", depth: 4, "1.1 "),
   // 正文字体与字号参数
   text-args: auto,
@@ -47,7 +45,7 @@
   it,
 ) = {
   // 0.  标志前言结束
-  anti-front-end()
+  set page(numbering: "1")
 
   // 1.  默认参数
   fonts = 字体 + fonts
@@ -74,9 +72,9 @@
   set par(
     leading: leading,
     justify: justify,
-    first-line-indent: first-line-indent
+    first-line-indent: first-line-indent,
+    spacing: spacing
   )
-  show par: set block(spacing: spacing)
   show raw: set text(font: fonts.等宽)
   // 3.2 脚注样式
   show footnote.entry: set text(font: fonts.宋体, size: 字号.五号)
@@ -118,7 +116,6 @@
       below: array-at(heading-below, it.level),
     )
     it
-    fake-par
   }
   // 4.3 标题居中与自动换页
   show heading: it => {
@@ -161,6 +158,8 @@
       }
     )
   }))
+
+  counter(page).update(1)
 
   it
 }

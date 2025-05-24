@@ -7,11 +7,26 @@
 
 #let (
   // 布局函数
-  twoside, doc, preface, mainmatter, mainmatter-end, appendix, 
+  twoside,
+  doc,
+  preface,
+  mainmatter,
+  appendix,
   // 页面函数
-  fonts-display-page, cover, title, decl-page, abstract, abstract-en, bilingual-bibliography,
-  outline-page, list-of-figures, list-of-tables, notation, acknowledgement,conclusion,
-  onum: o, 
+  fonts-display-page,
+  cover,
+  title,
+  decl-page,
+  abstract,
+  abstract-en,
+  bilingual-bibliography,
+  outline-page,
+  list-of-figures,
+  list-of-tables,
+  notation,
+  acknowledgement,
+  conclusion,
+  onum: o,
 ) = documentclass(
   // anonymous: true,  // 盲审模式
   twoside: false ,  // 双面模式，会加入空白页，便于打印
@@ -77,10 +92,6 @@
 
 // 表格目录
 // #list-of-tables()
-
-//解决页码问题
-#counter(page).update(0)
-#pagebreak() 　
 
 // 正文
 #show: mainmatter
@@ -352,10 +363,13 @@ $ hat(H)_psi = E_psi $
     #lorem(50)
 
 
-  #o(1)3123123测试
-  #o(2)假如说这个序号后面的文字过长出现了需要换行的情况，那么缩进会出现错\ #h(3em)误，建议使用`\ #h(3em)`手动处理
-  #o(3)3123123
-  #o(4)3123123
+    #o(1)3123123测试
+  
+    #o(2)假如
+  
+    #o(3)3123123
+    
+    #o(4)3123123
 
 
 === 正文子子标题
@@ -425,8 +439,3 @@ $ hat(H)_psi = E_psi $
   image("images/just-emblem.png", width: 30%),
   caption: [图片测试],
 ) <appendix-img>
-
-
-// 正文结束标志，不可缺少
-// 这里放在附录后面，使得页码能正确计数
-#mainmatter-end()

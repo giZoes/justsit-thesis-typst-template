@@ -1,5 +1,5 @@
+#import "../utils/custom-cuti.typ": fakebold
 #import "../utils/style.typ": 字号, 字体
-#import "../utils/indent.typ": fake-par
 #import "../utils/invisible-heading.typ": invisible-heading
 
 // 本科生中文摘要页
@@ -52,10 +52,8 @@
     ]
 
     #[
-      #set par(first-line-indent: 2em)
+      #set par(first-line-indent: (amount: 2em, all: true))
 
-      #fake-par
-      
       #body
     ]
 

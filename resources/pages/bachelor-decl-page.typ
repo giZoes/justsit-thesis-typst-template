@@ -1,4 +1,3 @@
-#import "../utils/indent.typ": indent
 #import "../utils/style.typ": 字号, 字体
 #import "../../others/bachelor-assignment.typ":bachelor-assignment
 
@@ -50,9 +49,9 @@
 
   block[
     #set text(font: fonts.宋体, size: 字号.四号)
-    #set par(justify: true, first-line-indent: 2em, leading: 1.28em)
+    #set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 1.28em)
 
-    #indent 本人郑重声明：所呈交的学位论文，是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。
+    本人郑重声明：所呈交的学位论文，是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。
   ]
 
   v(100pt)
@@ -93,18 +92,18 @@
 
   block[
     #set text(font: fonts.宋体, size: 字号.四号)
-    #set par(justify: true, first-line-indent: 2em, leading: 1.28em)
+    #set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 1.28em)
 
-    #indent 本学位论文作者完全了解学校有关保留、使用学位论文的规定，同意学校保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅。本人授权江苏科技大学可以将本学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存和汇编本学位论文。
+    本学位论文作者完全了解学校有关保留、使用学位论文的规定，同意学校保留并向国家有关部门或机构送交论文的复印件和电子版，允许论文被查阅和借阅。本人授权江苏科技大学可以将本学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存和汇编本学位论文。
   ]
 
   v(32pt)
 
   block[
     #set text(font: fonts.宋体, size: 字号.四号)
-    #set par(justify: true, first-line-indent: 2em, leading: 1.28em)
+    #set par(justify: true, first-line-indent:  (amount: 2em, all: true), leading: 1.28em)
 
-    #indent 本学位论文属于： 
+    本学位论文属于： 
     
     1、保密 □，在#h(3em)年解密后适用本授权书。
 
